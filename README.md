@@ -2,6 +2,8 @@
 
 This is the task platform I built for the Surge AI Financial SFT Data Collection project. It's what financial experts will see and use when doing the actual work — taking qualification tests, submitting data, and reviewing each other's submissions.
 
+Access the live website here: `https://rajamedindrao.github.io/DataCollectionProject-SFT/`
+
 ## What This Is
 
 A static React app that shows the full platform experience for this project. No database, no login — just the UI with sample data so you can see exactly how contributors interact with the platform at each stage.
