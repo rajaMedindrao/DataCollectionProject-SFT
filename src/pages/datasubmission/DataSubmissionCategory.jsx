@@ -19,7 +19,7 @@ function ReferencePanel({ open, minimized, onToggleMin, onClose, cat, example })
         <div className="flex items-center gap-2">
           <BookMarked size={14} className="text-[var(--color-cream)]" />
           <span className="font-[var(--font-mono)] text-[0.72rem] tracking-widest text-[var(--color-cream)] font-medium">
-            REFERENCE — {cat.title.toUpperCase()}
+            REFERENCE | {cat.title.toUpperCase()}
           </span>
         </div>
         <div className="flex items-center gap-1">
@@ -108,7 +108,7 @@ export default function DataSubmissionCategory() {
         <div className="flex items-center justify-between mb-8">
           <div>
             <div className="font-[var(--font-mono)] text-[0.7rem] tracking-[0.15em] text-[var(--color-accent)]">
-              DATA SUBMISSION — {cat.title.toUpperCase()}
+              DATA SUBMISSION | {cat.title.toUpperCase()}
             </div>
             <h1 className="font-[var(--font-display)] text-2xl text-[var(--color-ink)] font-medium mt-1">
               Create a new submission
@@ -154,7 +154,7 @@ export default function DataSubmissionCategory() {
     <div className="max-w-5xl mx-auto px-8 py-10">
       <div className="mb-8">
         <div className="font-[var(--font-mono)] text-[0.7rem] tracking-[0.15em] text-[var(--color-accent)] mb-2">
-          DATA SUBMISSION — {cat.title.toUpperCase()}
+          DATA SUBMISSION | {cat.title.toUpperCase()}
         </div>
         <h1 className="font-[var(--font-display)] text-2xl text-[var(--color-ink)] font-medium tracking-tight">
           {cat.subtitle}

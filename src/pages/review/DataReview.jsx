@@ -21,7 +21,7 @@ export default function DataReview({ categoryStatus }) {
         </button>
         <div className="mb-6">
           <div className="font-[var(--font-mono)] text-[0.7rem] tracking-[0.15em] text-[var(--color-accent)] mb-2">
-            DATA REVIEW — CATEGORY {selectedCategory}
+            DATA REVIEW | CATEGORY {selectedCategory}
           </div>
           <h1 className="font-[var(--font-display)] text-2xl text-[var(--color-ink)] font-medium">
             Submissions available for review
@@ -166,17 +166,17 @@ function ReviewScreen({ submission, onBack, category }) {
 
       <div className="mb-6">
         <div className="font-[var(--font-mono)] text-[0.7rem] tracking-[0.15em] text-[var(--color-accent)] mb-2">
-          REVIEWING — {submission.id}
+          REVIEWING | {submission.id}
         </div>
         <h1 className="font-[var(--font-display)] text-2xl text-[var(--color-ink)] font-medium">
           Review this data submission
         </h1>
         {editing && (
-          <p className="text-sm text-[var(--color-accent)] mt-1 font-medium">Editing mode — modify the fields below, then submit your review.</p>
+          <p className="text-sm text-[var(--color-accent)] mt-1 font-medium">Editing mode: modify the fields below, then submit your review.</p>
         )}
       </div>
 
-      {/* Submission content — editable when decision is "fix" */}
+      {/* Submission content - editable when decision is "fix" */}
       <div className="bg-white border border-[var(--color-border)] p-5 mb-6 space-y-4">
         <div className="font-[var(--font-mono)] text-[0.7rem] tracking-widest text-[var(--color-accent)]">SUBMISSION CONTENT</div>
 
@@ -272,7 +272,7 @@ function ReviewScreen({ submission, onBack, category }) {
                     {editing ? (
                       <input value={doc.pdf_url} onChange={e => updateDocField(i, 'pdf_url', e.target.value)} className="w-full mt-0.5 p-1.5 border border-[var(--color-border)] bg-white text-sm focus:outline-none focus:border-[var(--color-accent)]" />
                     ) : (
-                      <p className="text-xs text-[var(--color-ink)] break-all">{doc.pdf_url || '—'}</p>
+                      <p className="text-xs text-[var(--color-ink)] break-all">{doc.pdf_url || 'N/A'}</p>
                     )}
                   </div>
                 </div>

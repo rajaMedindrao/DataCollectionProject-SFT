@@ -159,28 +159,28 @@ export const REVIEW_RUBRIC = {
   criteria: [
     { name: "Question Creation", levels: [
       { label: "Accept", text: "Matches the assigned category in topic and difficulty; factual" },
-      { label: "Fix", text: "Slightly ambiguous, borderline category fit — edit and resubmit" },
-      { label: "Reject", text: "Wrong category, opinion-based — reject the submission" }
+      { label: "Fix", text: "Slightly ambiguous, borderline category fit: edit and resubmit" },
+      { label: "Reject", text: "Wrong category, opinion-based: reject the submission" }
     ]},
     { name: "Expert Answer & Accuracy", levels: [
       { label: "Accept", text: "Directly and accurately answers the question with only relevant information" },
-      { label: "Fix", text: "Correct answer but contains extra content or minor error — edit and resubmit" },
-      { label: "Reject", text: "Factually wrong, or does not answer the question asked — reject" }
+      { label: "Fix", text: "Correct answer but contains extra content or minor error: edit and resubmit" },
+      { label: "Reject", text: "Factually wrong, or does not answer the question asked: reject" }
     ]},
     { name: "Justification", levels: [
       { label: "Accept", text: "Reasoning is clear and complete; formula, inputs, and arithmetic shown" },
-      { label: "Fix", text: "Reasoning is partial, or formula and work are missing — edit and resubmit" },
-      { label: "Reject", text: "No reasoning provided, or reasoning is incoherent — reject" }
+      { label: "Fix", text: "Reasoning is partial, or formula and work are missing: edit and resubmit" },
+      { label: "Reject", text: "No reasoning provided, or reasoning is incoherent: reject" }
     ]},
     { name: "Supporting Facts", levels: [
       { label: "Accept", text: "All required numbers, names, dates, and page references included" },
-      { label: "Fix", text: "Some required data missing or unnecessary irrelevant data — edit and resubmit" },
-      { label: "Reject", text: "Most required data missing, or data is fabricated — reject" }
+      { label: "Fix", text: "Some required data missing or unnecessary irrelevant data: edit and resubmit" },
+      { label: "Reject", text: "Most required data missing, or data is fabricated: reject" }
     ]},
     { name: "Adherence to Schema", levels: [
       { label: "Accept", text: "All fields populated; JSON parses; metadata and source_url verified" },
-      { label: "Fix", text: "Minor errors (wrong year, formatting issue) — edit and resubmit" },
-      { label: "Reject", text: "Wrong JSON parse, fields are blank — reject" }
+      { label: "Fix", text: "Minor errors (wrong year, formatting issue): edit and resubmit" },
+      { label: "Reject", text: "Wrong JSON parse, fields are blank: reject" }
     ]},
   ]
 };
@@ -191,14 +191,14 @@ export const GUIDELINES = [
   "Only cite 10-K or 10-Q documents from SEC EDGAR",
   "Sharing or using questions/answers before or after submission is prohibited",
   "Source materials from SEC website only, published on or after October 2023",
-  "Questions must ask for factual information — no opinions or forecasts",
+  "Questions must ask for factual information, no opinions or forecasts",
 ];
 
 export const SEC_ACCESS_STEPS = [
   "Go to: https://www.sec.gov/edgar/searchedgar/companysearch",
   'Search for the company, then click on the relevant 10-K or 10-Q filing',
   'Click "Menu" on the SEC page, then click "Open as HTML"',
-  '"Print" and set destination to "Save as PDF" — save the PDF file',
+  '"Print" and set destination to "Save as PDF", then save the PDF file',
   "Copy the SEC URL and enter it in the relevant fields in your answer",
 ];
 
@@ -214,7 +214,7 @@ export const AUTO_REJECT_CRITERIA = [
 
 export const JSON_FIELD_GUIDE = [
   { key: 'prompt', desc: 'The financial question you are creating. Must match the assigned category in topic and difficulty.' },
-  { key: 'expert_answer', desc: 'The factual answer. Be precise — state the number, value, or comparison the prompt asks for.' },
+  { key: 'expert_answer', desc: 'The factual answer. Be precise: state the number, value, or comparison the prompt asks for.' },
   { key: 'supporting_facts', desc: 'Relevant data from the filing(s) with page references. Self-contained so a reviewer can verify without opening the source PDF.' },
   { key: 'justification', desc: 'Reasoning or calculation. For calculations, show the formula, inputs, and arithmetic.' },
   { key: 'documents', desc: 'Metadata about each SEC filing used (company, ticker, CIK, doc type, dates) and SEC URL.' },

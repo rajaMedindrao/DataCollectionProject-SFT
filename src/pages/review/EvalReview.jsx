@@ -21,7 +21,7 @@ export default function EvalReview({ categoryStatus }) {
         </button>
         <div className="mb-6">
           <div className="font-[var(--font-mono)] text-[0.7rem] tracking-[0.15em] text-[var(--color-accent)] mb-2">
-            EVAL REVIEW — CATEGORY {selectedCategory}
+            EVAL REVIEW | CATEGORY {selectedCategory}
           </div>
           <h1 className="font-[var(--font-display)] text-2xl text-[var(--color-ink)] font-medium">
             Available qualification submissions to review
@@ -179,7 +179,7 @@ function GradingScreen({ submission, category, onBack }) {
 
       <div className="mb-6">
         <div className="font-[var(--font-mono)] text-[0.7rem] tracking-[0.15em] text-[var(--color-accent)] mb-2">
-          GRADING — {submission.id}
+          GRADING | {submission.id}
         </div>
         <h1 className="font-[var(--font-display)] text-2xl text-[var(--color-ink)] font-medium">
           Grade this qualification submission
@@ -191,7 +191,7 @@ function GradingScreen({ submission, category, onBack }) {
         <div className="font-[var(--font-mono)] text-[0.7rem] tracking-widest text-[var(--color-accent)]">SUBMITTED ANSWERS</div>
 
         <div>
-          <div className="font-[var(--font-mono)] text-[0.65rem] text-[var(--color-muted)] mb-1">QUESTION 1 — PROMPT (GIVEN)</div>
+          <div className="font-[var(--font-mono)] text-[0.65rem] text-[var(--color-muted)] mb-1">QUESTION 1: PROMPT (GIVEN)</div>
           <p className="text-sm text-[var(--color-ink)] italic leading-relaxed bg-[var(--color-cream)] p-3 border border-[var(--color-border)]">"{submission.q1_prompt}"</p>
         </div>
         <div>
@@ -210,12 +210,12 @@ function GradingScreen({ submission, category, onBack }) {
         <DocumentMetadataDisplay documents={submission.q1_documents} />
 
         <div className="border-t border-[var(--color-border)] pt-4">
-          <div className="font-[var(--font-mono)] text-[0.65rem] text-[var(--color-muted)] mb-1">QUESTION 2 — SELF-WRITTEN PROMPT</div>
+          <div className="font-[var(--font-mono)] text-[0.65rem] text-[var(--color-muted)] mb-1">QUESTION 2: SELF-WRITTEN PROMPT</div>
           <p className="text-sm text-[var(--color-ink)] italic leading-relaxed bg-[var(--color-cream)] p-3 border border-[var(--color-border)]">"{submission.q2_prompt}"</p>
         </div>
 
         <div>
-          <div className="font-[var(--font-mono)] text-[0.65rem] text-[var(--color-muted)] mb-1">QUESTION 3 — SELF-WRITTEN PROMPT</div>
+          <div className="font-[var(--font-mono)] text-[0.65rem] text-[var(--color-muted)] mb-1">QUESTION 3: SELF-WRITTEN PROMPT</div>
           <p className="text-sm text-[var(--color-ink)] italic leading-relaxed bg-[var(--color-cream)] p-3 border border-[var(--color-border)]">"{submission.q3_prompt}"</p>
         </div>
       </div>

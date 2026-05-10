@@ -7,7 +7,7 @@ export default function Home() {
       {/* Hero */}
       <div className="mb-14">
         <div className="font-[var(--font-mono)] text-[0.7rem] tracking-[0.15em] text-[var(--color-accent)] mb-3">
-          FINANCIAL ANALYSIS — SFT DATA COLLECTION
+          FINANCIAL ANALYSIS | SFT DATA COLLECTION
         </div>
         <h1 className="font-[var(--font-display)] text-5xl leading-tight text-[var(--color-ink)] font-medium tracking-tight">
           Write the questions<br />

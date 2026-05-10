@@ -19,7 +19,7 @@ function ReferencePanel({ open, minimized, onToggleMin, onClose, cat, example })
         <div className="flex items-center gap-2">
           <BookMarked size={14} className="text-[var(--color-cream)]" />
           <span className="font-[var(--font-mono)] text-[0.72rem] tracking-widest text-[var(--color-cream)] font-medium">
-            REFERENCE — {cat.title.toUpperCase()}
+            REFERENCE | {cat.title.toUpperCase()}
           </span>
         </div>
         <div className="flex items-center gap-1">
@@ -109,7 +109,7 @@ export default function QualificationTest({ onComplete }) {
       <div className="flex items-center justify-between mb-8">
         <div>
           <div className="font-[var(--font-mono)] text-[0.7rem] tracking-[0.15em] text-[var(--color-accent)]">
-            TEST IN PROGRESS — {cat.title.toUpperCase()}
+            TEST IN PROGRESS | {cat.title.toUpperCase()}
           </div>
           <h1 className="font-[var(--font-display)] text-2xl text-[var(--color-ink)] font-medium mt-1">
             Three questions. Take your time.
@@ -133,7 +133,7 @@ export default function QualificationTest({ onComplete }) {
       <div className="mb-10">
         <div className="flex items-center gap-3 mb-3">
           <span className="font-[var(--font-mono)] text-xs tracking-widest text-[var(--color-accent)] font-medium">QUESTION 01</span>
-          <span className="font-[var(--font-mono)] text-[0.7rem] text-[var(--color-ink-light)] bg-[var(--color-cream-dark)] px-2 py-0.5">Given prompt — fill the answer</span>
+          <span className="font-[var(--font-mono)] text-[0.7rem] text-[var(--color-ink-light)] bg-[var(--color-cream-dark)] px-2 py-0.5">Given prompt, fill the answer</span>
         </div>
         <p className="text-sm text-[var(--color-muted)] mb-4">
           Read the prompt below and fill out all answer fields accurately.

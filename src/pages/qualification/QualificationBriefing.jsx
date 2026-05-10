@@ -18,7 +18,7 @@ export default function QualificationBriefing() {
     <div className="max-w-5xl mx-auto px-8 py-10">
       <div className="mb-8">
         <div className="font-[var(--font-mono)] text-[0.7rem] tracking-[0.15em] text-[var(--color-accent)] mb-2">
-          {cat.title.toUpperCase()} — PRE-TEST BRIEFING
+          {cat.title.toUpperCase()} | PRE-TEST BRIEFING
         </div>
         <h1 className="font-[var(--font-display)] text-2xl text-[var(--color-ink)] font-medium tracking-tight">
           {cat.subtitle}
@@ -68,7 +68,7 @@ export default function QualificationBriefing() {
             <div className="bg-white border border-[var(--color-border)]">
               {[
                 { key: 'prompt', desc: 'The question itself. For Q1 it is given. For Q2 & Q3, you write your own.' },
-                { key: 'expert_answer', desc: 'Your factual answer. Be precise — state the number, value, or comparison the prompt asks for.' },
+                { key: 'expert_answer', desc: 'Your factual answer. Be precise: state the number, value, or comparison the prompt asks for.' },
                 { key: 'supporting_facts', desc: 'Relevant data from the filing(s) with page references. Self-contained so a reviewer can verify without opening the source PDF.' },
                 { key: 'justification', desc: 'Show your reasoning or calculation. Especially important for Category B and C.' },
                 { key: 'documents', desc: 'Metadata about each SEC filing used (company, ticker, CIK, doc type, dates) and SEC URL.' },
@@ -120,7 +120,7 @@ export default function QualificationBriefing() {
           onClick={() => navigate(`/qualification/${categoryId}/test`)}
           className="flex items-center gap-3 px-7 py-3.5 bg-[var(--color-ink)] text-[var(--color-cream)] text-sm font-medium hover:gap-5 transition-all"
         >
-          I have read everything — start the test
+          I have read everything, start the test
           <ChevronRight size={17} />
         </button>
       </div>
