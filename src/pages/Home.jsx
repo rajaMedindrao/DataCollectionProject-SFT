@@ -1,5 +1,6 @@
+import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FileText, CheckCircle2, Star, ChevronRight } from 'lucide-react';
+import { FileText, CheckCircle2, Star, ChevronRight, Download, ChevronDown } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -9,11 +10,14 @@ export default function Home() {
         <div className="font-[var(--font-mono)] text-[0.7rem] tracking-[0.15em] text-[var(--color-accent)] mb-3">
           FINANCIAL ANALYSIS | SFT DATA COLLECTION
         </div>
-        <h1 className="font-[var(--font-display)] text-5xl leading-tight text-[var(--color-ink)] font-medium tracking-tight">
-          Write the questions<br />
-          <em className="italic text-[var(--color-accent)]">finance professionals</em><br />
-          actually ask.
-        </h1>
+        <div className="flex items-start justify-between gap-8">
+          <h1 className="font-[var(--font-display)] text-5xl leading-tight text-[var(--color-ink)] font-medium tracking-tight">
+            Write the questions<br />
+            <em className="italic text-[var(--color-accent)]">finance professionals</em><br />
+            actually ask.
+          </h1>
+          <DownloadSampleData />
+        </div>
         <p className="text-lg text-[var(--color-ink-light)] mt-5 max-w-xl leading-relaxed">
           This project involves writing finance questions and human-written answers based on public SEC filings (10-K and 10-Q reports). The data trains an AI model on real financial reasoning.
         </p>
@@ -94,6 +98,57 @@ export default function Home() {
           </div>
         </div>
       </div>
+    </div>
+  );
+}
+
+function DownloadSampleData() {
+  const [open, setOpen] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const handler = (e) => { if (ref.current && !ref.current.contains(e.target)) setOpen(false); };
+    document.addEventListener('mousedown', handler);
+    return () => document.removeEventListener('mousedown', handler);
+  }, []);
+
+  const base = import.meta.env.BASE_URL;
+
+  const download = (format) => {
+    const file = format === 'json' ? 'SampleData.jsonl' : 'SampleData.csv';
+    const a = document.createElement('a');
+    a.href = `${base}sampledata/${file}`;
+    a.download = file;
+    a.click();
+    setOpen(false);
+  };
+
+  return (
+    <div className="relative shrink-0 mt-2" ref={ref}>
+      <button
+        onClick={() => setOpen(!open)}
+        className="flex items-center gap-2 px-4 py-2.5 bg-[var(--color-ink)] text-[var(--color-cream)] text-sm font-medium hover:opacity-90 transition-opacity"
+      >
+        <Download size={15} />
+        Download sample data
+        <ChevronDown size={14} className={`transition-transform ${open ? 'rotate-180' : ''}`} />
+      </button>
+      {open && (
+        <div className="absolute right-0 mt-1 bg-white border border-[var(--color-border)] shadow-lg z-10 min-w-[160px]">
+          <button
+            onClick={() => download('json')}
+            className="w-full text-left px-4 py-2.5 text-sm text-[var(--color-ink)] hover:bg-[var(--color-cream-dark)] transition-colors"
+          >
+            JSON (.jsonl)
+          </button>
+          <button
+            onClick={() => download('csv')}
+            className="w-full text-left px-4 py-2.5 text-sm text-[var(--color-ink)] hover:bg-[var(--color-cream-dark)] transition-colors border-t border-[var(--color-border)]"
+          >
+            CSV (.csv)
+          </button>
+        </div>
+      )}
     </div>
   );
 }
