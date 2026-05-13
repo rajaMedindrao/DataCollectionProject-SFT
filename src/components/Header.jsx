@@ -22,14 +22,11 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-8 py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3">
           <div className="w-8 h-8 flex items-center justify-center bg-[var(--color-ink)]">
-            <span className="font-[var(--font-display)] text-[var(--color-cream)] text-lg font-semibold">S</span>
+            <span className="font-[var(--font-display)] text-[var(--color-cream)] text-lg font-semibold">P</span>
           </div>
           <div className="flex flex-col">
             <span className="font-[var(--font-body)] text-sm tracking-wide text-[var(--color-ink)] font-medium leading-tight">
-              SURGE AI
-            </span>
-            <span className="font-[var(--font-mono)] text-[0.55rem] text-[var(--color-muted)] tracking-wide leading-tight">
-              updated by Raja
+              Post Training Data Collection
             </span>
           </div>
         </Link>

@@ -1,6 +1,6 @@
-# Surge AI — Financial Data Collection Platform
+# Post Training Data Collection — Financial Data Collection Platform
 
-This is the task platform I built for the Surge AI Financial SFT Data Collection project. It's what financial experts will see and use when doing the actual work — taking qualification tests, submitting data, and reviewing each other's submissions.
+This is the task platform I built for the Post Training Data Collection Financial SFT Data Collection project. It's what financial experts will see and use when doing the actual work — taking qualification tests, submitting data, and reviewing each other's submissions.
 
 Access the live website here: `https://rajamedindrao.github.io/DataCollectionProject-SFT/`
 
@@ -73,7 +73,7 @@ surge-worker-platform/
 
 ## Design Decisions
 
-- **Looks like Surge AI**: Cream background, IBM Plex fonts, clean cards, minimal color palette. Professional and functional.
+- **Looks like Post Training Data Collection**: Cream background, IBM Plex fonts, clean cards, minimal color palette. Professional and functional.
 - **Progressive unlock**: Category B and C are locked until you pass the previous one. Same for Data Submission and Review sections.
 - **Appropriate info only**: No internal metrics, submission counts, client details, or deadlines. Only what's needed to do the task.
 - **Static with sample data**: All the sample submissions and qualification entries are hardcoded in `src/data/categories.js`. No backend needed for the demo.
